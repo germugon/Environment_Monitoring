@@ -1,0 +1,60 @@
+package kafka;
+
+import java.util.Properties;
+
+import com.google.common.base.Preconditions;
+
+import kafka.javaapi.producer.Producer;
+import kafka.producer.KeyedMessage;
+import kafka.producer.ProducerConfig;
+
+public class ProducerTest {
+	
+	private Properties props = null;  
+	private Producer<String, String> producer = null;  
+	
+	private static final String CUSTOME_PARTITION_KEY = "custom.partition.key";  
+	private static final String CUSTOME_TOPIC_NAME = "custom.topic.name";  
+	private static final String DEFAULT_ENCODING = "UTF-8";  
+	
+	public ProducerTest( String topic ) {  
+		
+		props = new Properties();  
+		props.setProperty("metadata.broker.list","192.168.10.100:9092");  
+		props.setProperty("serializer.class","kafka.serializer.StringEncoder");  
+		props.put("request.required.acks", "1");   
+		props.put(CUSTOME_TOPIC_NAME, topic);   
+		
+		ProducerConfig config = new ProducerConfig(props);  
+		producer = new Producer<String, String>(config);   
+	}
+	
+	public void sendMessage( String message ) {  
+		String partitionKey = (String) props.get(CUSTOME_PARTITION_KEY);  
+		String topic = Preconditions.checkNotNull((String) props.get(CUSTOME_TOPIC_NAME),"topic name is required");  
+		
+		String eventData = new String(event.getBody(), DEFAULT_ENCODING);  
+		logger.info("Send Message : [" + topic + ":" + eventData + "]");
+		KeyedMessage<String,String> data = ( partitionKey == null || partitionKey.isEmpty() ) ? 
+				new KeyedMessage<String, String>(topic, eventData) : new KeyedMessage<String, String>(topic, partitionKey, eventData); 
+		producer.send(data);  
+		
+		KeyedMessage<String, String> data = new KeyedMessage<String, String>( topic, message );
+		
+		try {  
+			producer.send(data);  
+			System.out.println( "Send message: " + message );  
+		} catch (Exception e) {  
+			e.printStackTrace();  
+		}  
+		producer.close();
+	}
+	
+	public static void main(String[] args) {  
+		ProducerTest producer = new ProducerTest("mykafka");
+		producer.sendMessage("test-kafka-producer");
+		   
+	}  
+	
+	
+}

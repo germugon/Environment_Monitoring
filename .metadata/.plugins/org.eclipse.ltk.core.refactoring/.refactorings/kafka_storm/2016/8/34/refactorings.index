@@ -1,0 +1,14 @@
+1471519017129	Delete element
+1471526104156	Rename package 'flume_kafka_storm2'
+1471619691598	Rename type 'ConfigUtils'
+1471619696373	Rename type 'DateUtils'
+1471622121056	Delete element
+1471695471827	Delete element
+1471697755089	Delete element
+1471697864432	Delete element
+1471698484637	Rename package 'stotm'
+1471698500427	Rename package 'stotm.fail'
+1471698509593	Rename package 'stotm.util'
+1471703074605	Rename resource 'config.property'
+1471703236468	Rename resource 'config.properties'
+1471703357406	Rename resource 'kafka.config'

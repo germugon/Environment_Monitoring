@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.apache.axis2.tool.codegen.eclipse.ui.JavaWSDLOptionsPage">
+		<item value="" key="SCHEMA_TARGET_NS_PREF"/>
+		<item value="" key="TARGET_NS"/>
+		<item value="" key="TARGET_NS_PREF"/>
+		<item value="" key="SCHEMA_SERVICE"/>
+		<item value="" key="SCHEMA_TARGET_NS"/>
+	</section>
+	<section name="org.apache.axis2.tool.codegen.eclipse.ui.OptionsPage">
+		<item value="service" key="PREF_PACKAGE_NAME"/>
+		<item value="0" key="PREF_DATABINDER_INDEX"/>
+		<item value="false" key="PREF_GEN_ALL"/>
+		<item value="true" key="PREF_RADIO_SYNC_AND_ASYNC"/>
+		<item value="0" key="PREF_LANGUAGE_INDEX"/>
+		<item value="false" key="PREF_CHECK_GENERATE_TESTCASE"/>
+		<item value="0" key="PREF_CODEGEN_OPTION_INDEX"/>
+		<item value="false" key="PREF_RADIO_ASYNC_ONLY"/>
+		<item value="false" key="PREF_GEN_SERVERSIDE_INTERFACE"/>
+		<item value="0" key="PREF_TEXT_SERVICENAME"/>
+		<item value="0" key="PREF_TEXT_PORTNAME"/>
+		<item value="false" key="PREF_CHECK_GENERATE_SERVERCONFIG"/>
+		<item value="true" key="PREF_CHECK_GENERATE_SERVERSIDE"/>
+		<item value="false" key="PREF_RADIO_SYNC_ONLY"/>
+	</section>
+	<section name="org.apache.axis2.tool.codegen.eclipse.ui.WSDLFileSelectionPage">
+		<item value="http://localhost:8080/axis2/services/ProducerService?wsdl" key="PREF_WSDL_LOCATION"/>
+	</section>
+	<section name="org.apache.axis2.tool.codegen.eclipse.ui.JavaWSDLOutputLocationPage">
+		<item value="services.wsdl" key="OUTPUT_WSDL"/>
+		<item value="true" key="OUTPUT_WSDL_LOCATION_FILESYATEM"/>
+		<item value="" key="OUTPUT_WSDL_LOCATION"/>
+		<item value="false" key="OUTPUT_WSDL_LOCATION_WORKSPACE"/>
+	</section>
+	<section name="org.apache.axis2.tool.codegen.eclipse.ui.JavaSourceSelectionPage">
+		<item value="" key="JAVA_CLASS_NAME"/>
+		<list key="JAVA_CLASS_PATH_NAME">
+		</list>
+	</section>
+	<section name="org.apache.axis2.tool.codegen.eclipse.ui.ToolSelectionPage">
+		<item value="false" key="PREF_TOOL_SELECTION_JAVA2WSDL"/>
+		<item value="true" key="PREF_TOOL_SELECTION_WSDL2JAVA"/>
+	</section>
+	<section name="org.apache.axis2.tool.codegen.eclipse.ui.OutputPage">
+		<item value="false" key="PREF_CHECK_AXIS_PLUGIN_LIB_COPY"/>
+		<item value="" key="PREF_OUTPUT_LOCATION"/>
+		<item value="true" key="PREF_CHECK_WORKSPACE"/>
+		<item value="false" key="PREF_CHECK_FILE_SYSTEM"/>
+	</section>
+</section>

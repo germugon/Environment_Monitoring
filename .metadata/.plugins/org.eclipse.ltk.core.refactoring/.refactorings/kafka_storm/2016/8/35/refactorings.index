@@ -1,0 +1,26 @@
+1471770492065	Move package
+1471770530392	Rename package 'kafka_storm'
+1471770563259	Rename package 'flume_kafka'
+1471770596325	Move package
+1471770616440	Rename package 'storm'
+1471770658071	Rename package 'storm.kafka'
+1471770727403	Rename package 'storm_kafka'
+1471770750188	Move package
+1471770783146	Rename package 'storm'
+1471770785528	Move package
+1471771006595	Move compilation unit
+1471784613952	Rename package 'storm.wordcount'
+1471784622257	Rename package 'storm.mykafa'
+1471784650014	Move compilation units
+1471952763964	Move package
+1471952768604	Move package
+1471953908384	Copy file
+1471963027363	Move 'kafka-config.properties' to 'resources'
+1471967580469	Copy file
+1472024599901	Copy package
+1472045268633	Delete element
+1472049730581	Copy compilation unit
+1472049835821	Copy package
+1472050600969	Copy file
+1472129362028	Copy file
+1472136797326	Copy file

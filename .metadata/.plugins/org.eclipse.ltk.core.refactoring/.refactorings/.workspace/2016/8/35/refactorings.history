@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;flume_kafka_storm&apos; to &apos;kafka_storm&apos;" description="Rename resource &apos;flume_kafka_storm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/flume_kafka_storm" name="kafka_storm" stamp="1471963411082" updateReferences="true"/>
+</session>

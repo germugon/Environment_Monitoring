@@ -1,0 +1,11 @@
+#Fri Sep 09 11:34:42 CST 2016
+vl=How many times the 'Finish' button pressed during the day
+l=Wizard class name
+ct=jbt
+d=1473392082073
+c=0
+cmp=usage
+a=finishWizard
+cl=org.eclipse.wst.command.internal.env.ui.widgets.popup.DynamicPopupWizard
+v=2.1.0
+s=2

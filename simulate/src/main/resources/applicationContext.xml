@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd" >
+	
+	<!-- 扫描注解（扫描@Controller注解），自动注册带有@Service、@repository、@Component等注解的类为bean -->
+    <context:component-scan base-package="com" >
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+	
+	<!-- 定义资源文件 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	    <property name="location">
+	    	<value>classpath:jdbc-config.properties</value>
+	    </property>
+	</bean>
+	
+	<!-- 配置数据源 c3p0 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+	    <property name="driverClass" value="${mysql.driverClassName}" />
+	    <property name="jdbcUrl" value="${mysql.url}" />
+	    <property name="user" value="${mysql.username}" />
+	    <property name="password" value="${mysql.password}" />
+	    <!-- 请求超时时间 -->
+		<property name="checkoutTimeout" value="${c3p0.checkoutTimeout}"/>
+		<!-- 连接池初始化连接数 -->
+		<property name="initialPoolSize" value="${c3p0.minPoolSize}"/>
+		<property name="minPoolSize" value="${c3p0.minPoolSize}"/>
+	    <property name="maxPoolSize" value="${c3p0.maxPoolSize}"/>
+		<!-- 当连接池中的连接耗尽的时候c3p0一次同时获取的连接数 -->
+		<property name="acquireIncrement" value="${c3p0.acquireIncrement}" />
+		<!-- 连接数据库连接池最大空闲时间  -->
+		<property name="maxIdleTime" value="${c3p0.maxIdleTime}"/>
+		<!-- 多久检查一次连接池的空闲连接 -->   
+        <property name="idleConnectionTestPeriod" value="${c3p0.idleConnectionTestPeriod}" />   
+		<property name="maxIdleTimeExcessConnections" value="${c3p0.maxIdleTimeExcessConnections}"/>
+	</bean>
+	
+	<bean id="sqlSessionFactory"  class="org.mybatis.spring.SqlSessionFactoryBean">            
+    	<property name="dataSource" ref="dataSource" />         
+    	<property name="configLocation" value="classpath:mybatis-config.xml"></property>        
+	</bean>
+	<!-- 获取session -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">  
+    	<constructor-arg ref="sqlSessionFactory" />  
+    </bean>
+	
+    <!-- 配置事务管理器 -->
+	<bean name="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- 支持事务注解 @Transactional -->
+   	<tx:annotation-driven transaction-manager="transactionManager" /> 
+   	
+   	
+   	<!-- 创建dao bean(只需提供接口不需提供实现类) -->  
+	<!-- 
+	<bean id="ScheduleJobDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
+    	<property name="mapperInterface" value="com.dao.ScheduleJobMapper" />  
+    	<property name="sqlSessionTemplate" ref="sqlSessionTemplate" />  
+	</bean> 
+	-->
+	 
+	 <!-- 自动扫描创建mapper bean -->  
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
+    	<property name="basePackage" value="com.dao" />  
+	</bean>
+	
+   	<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" />
+	<bean id="scheduleService"  class="com.service.ScheduleService" init-method="init"/>
+	
+</beans>

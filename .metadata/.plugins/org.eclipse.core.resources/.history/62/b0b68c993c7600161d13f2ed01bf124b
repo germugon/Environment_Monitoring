@@ -1,0 +1,13 @@
+package service;
+
+import kafka.ProducerTest;
+
+public class ProducerService {
+	
+	public void send( String topic, String message ) {   
+		ProducerTest producer = new ProducerTest(topic);
+		producer.sendMessage(message);
+		   
+	}  
+
+}
