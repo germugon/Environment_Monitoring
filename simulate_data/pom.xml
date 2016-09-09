@@ -14,6 +14,8 @@
     <junit.version>4.12</junit.version>
     <log4j.version>1.2.17</log4j.version>
     
+    <axis2.version>1.7.3</axis2.version>
+    
     <flume.version>1.6.0</flume.version>
     
     <quartz.version>2.2.1</quartz.version>
@@ -35,6 +37,28 @@
 		<version>${log4j.version}</version>
 	</dependency>
 	
+	<!-- axis2 -->
+	<dependency>
+	    <groupId>org.apache.axis2</groupId>
+	    <artifactId>axis2-kernel</artifactId>
+	    <version>${axis2.version}</version>
+	</dependency>	
+	<dependency>
+	    <groupId>org.apache.axis2</groupId>
+	    <artifactId>axis2-adb</artifactId>
+	    <version>${axis2.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.axis2</groupId>
+		<artifactId>axis2-transport-http</artifactId>
+		<version>${axis2.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.axis2</groupId>
+		<artifactId>axis2-transport-local</artifactId>
+		<version>${axis2.version}</version>
+	</dependency>
+
 	<!-- Flume-ng Dependency -->
     <dependency>
 	    <groupId>org.apache.flume</groupId>

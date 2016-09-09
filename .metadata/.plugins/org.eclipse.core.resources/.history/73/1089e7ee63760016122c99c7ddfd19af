@@ -1,0 +1,21 @@
+package util;
+
+public class ConfigUtil {
+
+	/**
+	 * KafkaProducer
+	 */
+	public final static String DEFAULT_TOPIC = "mykafka";
+	public final static String METADATA_BROKER_LIST = "192.168.10.100:9092";
+	public final static String SERIALIZER_CLASS = "kafka.serializer.StringEncoder";
+	public final static String REQUEST_REQUIRED_ACKS = "1";
+	
+	/**
+	 * KafkaConsumer
+	 */
+	public final static String ZOOKEEPER_CONNECT = "192.168.10.100:2181";   
+	public final static String GROUP_ID = "0";   
+	public final static String ZOOKEEPER_SESSION_TIMEOUT_MS = "10000";   
+	public final static String ZOOKEEPER_SYNC_TIME_MS = "200";   
+	public final static String AUTO_COMMIT_INTEVAL_MS = "1000"; 
+}

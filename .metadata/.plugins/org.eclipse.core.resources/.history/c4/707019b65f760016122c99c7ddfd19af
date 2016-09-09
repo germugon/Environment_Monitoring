@@ -1,0 +1,50 @@
+package webservice;
+
+import javax.xml.namespace.QName;  
+
+import org.apache.axis2.AxisFault;  
+import org.apache.axis2.addressing.EndpointReference;  
+import org.apache.axis2.client.Options;  
+import org.apache.axis2.rpc.client.RPCServiceClient;  
+  
+public class ProducerWebserviceClient  {  
+	
+    public static String getRes(String xmlString){      
+        try {  
+            RPCServiceClient ser = new RPCServiceClient ();  
+            Options options = ser.getOptions();  
+              
+            //指定调用WebService的URL  
+            EndpointReference targetEPR = new EndpointReference("http://localhost:8080/axis2/services/ProducerService?wsdl");  
+            options.setTo(targetEPR);  
+            //指定调用方法
+            options.setAction("urn:send");  
+              
+            //指定要调用的send方法及WSDL文件的命名空间  
+            QName opAddEntry = new QName("http://ws.apache.org/axis2/","send");  
+            
+            //指定send方法的参数值  
+            Object[] opAddEntryArgs = new Object[] { xmlString.toString()};  
+            //指定send方法返回值的数据类型的Class对象  
+            Class[] classes = new Class[] { String.class };  
+             
+            // 调用sfexpressService方法并输出该方法的返回值  
+            Object[] str = ser.invokeBlocking(opAddEntry, opAddEntryArgs, classes);  
+            return str[0].toString();  
+            
+        } catch (AxisFault e) {  
+            // TODO Auto-generated catch block  
+            e.printStackTrace();  
+        }  
+        return null;  
+    }  
+      
+    public static void main(String[] args) {  
+        //xmlString的格式  
+        StringBuilder xmlString = new StringBuilder();   
+        //根据不同的接口，修改对应的格式及内容。  
+        xmlString.append("test");      
+        System.out.println(ProducerWebserviceClient.getRes(xmlString.toString()));  
+    }  
+}
+

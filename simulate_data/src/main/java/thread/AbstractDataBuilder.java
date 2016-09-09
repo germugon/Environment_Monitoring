@@ -4,6 +4,9 @@ import java.text.DecimalFormat;
 
 import org.apache.log4j.Logger;
 
+import util.ConfigUtil;
+import webservice.ProducerWebserviceClient;
+
 /**
  * 生成模拟数据的抽象类
  * @author ZHOU
@@ -38,9 +41,20 @@ public abstract class AbstractDataBuilder implements Runnable{
 
 	/**
 	 * 推送数据到server
+	 * 调用webservice
 	 */
 	public void pushData() {
-		flume_logger.info(data);
+//		flume_logger.info(data);
+		
+		//指定调用方法的参数值  
+    	Object[] parameters = new Object[] { data }; 
+    	//指定调用方法返回值的数据类型  
+    	Class[] returnTypes = new Class[] { String.class }; 
+    	   
+    	Object[] results = ProducerWebserviceClient.RPCServiceCall(ConfigUtil.WEBSERVICE_METHOD, parameters, returnTypes);
+    	for(Object result : results) {
+    		System.out.println(result); 
+    	}
 	}
 
 	/**

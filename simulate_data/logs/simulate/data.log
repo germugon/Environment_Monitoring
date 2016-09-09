@@ -1,0 +1,77 @@
+2016-09-09 14:25:56 - [org.quartz.impl.StdSchedulerFactory] [INFO] 
+Using default implementation for ThreadExecutor
+2016-09-09 14:25:56 - [org.quartz.simpl.SimpleThreadPool] [INFO] 
+Job execution threads will use class loader of thread: main
+2016-09-09 14:25:56 - [org.quartz.core.SchedulerSignalerImpl] [INFO] 
+Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-09-09 14:25:56 - [org.quartz.core.QuartzScheduler] [INFO] 
+Quartz Scheduler v.2.2.1 created.
+2016-09-09 14:25:56 - [org.quartz.simpl.RAMJobStore] [INFO] 
+RAMJobStore initialized.
+2016-09-09 14:25:56 - [org.quartz.core.QuartzScheduler] [INFO] 
+Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-09-09 14:25:56 - [org.quartz.impl.StdSchedulerFactory] [INFO] 
+Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-09-09 14:25:56 - [org.quartz.impl.StdSchedulerFactory] [INFO] 
+Quartz scheduler version: 2.2.1
+2016-09-09 14:25:56 - [org.quartz.core.QuartzScheduler] [INFO] 
+Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2016-09-09 14:25:56 - [quartz.ScheduleService] [INFO] 
+scheduler start
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-0::DataTime,09/09/2016 14:26:00,Dust,8.49,Noise,51.02,Temperature,3.3,Humidity,87.4,Atmosphere,91.41,WindSpeed,2.3,WindDir,331.82
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-3::DataTime,09/09/2016 14:26:00,Dust,5.35,Noise,45.98,Temperature,8.62,Humidity,89.87,Atmosphere,108.22,WindSpeed,0.81,WindDir,351.99
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-2::DataTime,09/09/2016 14:26:00,Dust,17.27,Noise,61.77,Temperature,1.34,Humidity,101.93,Atmosphere,101.02,WindSpeed,1.69,WindDir,322.24
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-4::DataTime,09/09/2016 14:26:00,Dust,8.03,Noise,53.61,Temperature,14.75,Humidity,82.12,Atmosphere,97.44,WindSpeed,2.47,WindDir,318.83
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-8::DataTime,09/09/2016 14:26:00,Dust,11.78,Noise,56.6,Temperature,7.89,Humidity,90.14,Atmosphere,95.35,WindSpeed,1.87,WindDir,333.71
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-7::DataTime,09/09/2016 14:26:00,Dust,12.02,Noise,49.57,Temperature,7.25,Humidity,95.05,Atmosphere,97.02,WindSpeed,1.98,WindDir,351.95
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-6::DataTime,09/09/2016 14:26:00,Dust,5.22,Noise,59.33,Temperature,7.06,Humidity,89.56,Atmosphere,100.37,WindSpeed,2.44,WindDir,253.57
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-9::DataTime,09/09/2016 14:26:00,Dust,7.12,Noise,52.35,Temperature,15.09,Humidity,88.38,Atmosphere,94.58,WindSpeed,0.67,WindDir,291.34
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-5::DataTime,09/09/2016 14:26:00,Dust,9.07,Noise,57.32,Temperature,10.44,Humidity,97.49,Atmosphere,98.86,WindSpeed,1.03,WindDir,308.97
+2016-09-09 14:26:00 - [flume_avro] [INFO] 
+公司调试-1::DataTime,09/09/2016 14:26:00,Dust,12.67,Noise,58.67,Temperature,16.06,Humidity,88.25,Atmosphere,92.82,WindSpeed,1.74,WindDir,306.01
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-0::DataTime,09/09/2016 14:27:00,Dust,11.29,Noise,52.23,Temperature,18.92,Humidity,97.07,Atmosphere,102.57,WindSpeed,1.28,WindDir,330.56
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-1::DataTime,09/09/2016 14:27:00,Dust,10.24,Noise,58.13,Temperature,5.6,Humidity,97.2,Atmosphere,101.7,WindSpeed,2.16,WindDir,247.23
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-2::DataTime,09/09/2016 14:27:00,Dust,8.44,Noise,49.53,Temperature,9.13,Humidity,87.99,Atmosphere,97.5,WindSpeed,0.52,WindDir,349.14
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-3::DataTime,09/09/2016 14:27:00,Dust,18.25,Noise,48.2,Temperature,15.05,Humidity,95.23,Atmosphere,105.11,WindSpeed,1.93,WindDir,256.62
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-4::DataTime,09/09/2016 14:27:00,Dust,24.82,Noise,51.43,Temperature,8.02,Humidity,83.33,Atmosphere,92.77,WindSpeed,1.23,WindDir,247.72
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-5::DataTime,09/09/2016 14:27:00,Dust,21.43,Noise,63.92,Temperature,6.59,Humidity,88.39,Atmosphere,103.93,WindSpeed,2.28,WindDir,248.02
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-6::DataTime,09/09/2016 14:27:00,Dust,13.41,Noise,60.14,Temperature,7.75,Humidity,82.07,Atmosphere,101.56,WindSpeed,2.32,WindDir,308.43
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-7::DataTime,09/09/2016 14:27:00,Dust,9.43,Noise,58.33,Temperature,6.78,Humidity,89.99,Atmosphere,102.98,WindSpeed,2.17,WindDir,240.71
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-8::DataTime,09/09/2016 14:27:00,Dust,11.77,Noise,55.14,Temperature,11.83,Humidity,96.76,Atmosphere,93.72,WindSpeed,1.67,WindDir,348.03
+2016-09-09 14:27:00 - [flume_avro] [INFO] 
+公司调试-9::DataTime,09/09/2016 14:27:00,Dust,21.6,Noise,50.31,Temperature,7.62,Humidity,90.0,Atmosphere,92.26,WindSpeed,0.69,WindDir,332.95
+2016-09-09 15:37:05 - [org.apache.axis2.deployment.AxisConfigBuilder] [WARN] 
+Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+2016-09-09 15:40:28 - [org.apache.axis2.deployment.AxisConfigBuilder] [WARN] 
+Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+2016-09-09 15:54:22 - [org.apache.axis2.deployment.AxisConfigBuilder] [WARN] 
+Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+2016-09-09 15:54:33 - [org.apache.axis2.deployment.AxisConfigBuilder] [WARN] 
+Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details
+2016-09-09 16:06:53 - [org.apache.axis2.deployment.AxisConfigBuilder] [WARN] 
+Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer; see debug logs for more details

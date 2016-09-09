@@ -50,7 +50,6 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="thread.ThreadManager"/>
-<fullyQualifiedTypeName name="util.ConfigUtil"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="entity.OriginalData"/>
 <fullyQualifiedTypeName name="util.DateUtil"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="org.apache.axis2.AxisFault"/>
 <fullyQualifiedTypeName name="org.apache.axis2.client.Options"/>
 <fullyQualifiedTypeName name="org.apache.axis2.addressing.EndpointReference"/>
+<fullyQualifiedTypeName name="util.ConfigUtil"/>
 </qualifiedTypeNameHistroy>

@@ -25,6 +25,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\Environment_Monitoring\flume_kafka"/>
 			<item value="E:\Environment Monitoring\flume_kafka_storm"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -41,6 +42,8 @@
 			<item value="environment_monitor"/>
 		</list>
 		<list key="package">
+			<item value="environment_monitor.kafka_webservcie"/>
+			<item value="environment_monitor.kafka_webservice"/>
 			<item value="environment_monitor.simulate_data1"/>
 			<item value="environment_monitor.webservice_client"/>
 			<item value="environment_monitor.KafkaWebService"/>
@@ -53,6 +56,8 @@
 			<item value="environment_monitor.simulate"/>
 		</list>
 		<list key="artifactId">
+			<item value="kafka_webservcie"/>
+			<item value="kafka_webservice"/>
 			<item value="simulate_data1"/>
 			<item value="webservice_client"/>
 			<item value="KafkaWebService"/>

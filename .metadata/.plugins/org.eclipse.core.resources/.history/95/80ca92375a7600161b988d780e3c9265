@@ -1,0 +1,53 @@
+package webservice;
+
+import javax.xml.namespace.QName;  
+
+import org.apache.axis2.AxisFault;  
+import org.apache.axis2.addressing.EndpointReference;  
+import org.apache.axis2.client.Options;  
+import org.apache.axis2.rpc.client.RPCServiceClient;  
+  
+public class ProducerWebserviceClient  {  
+    public static String getRes(String xmlString){  
+          
+        try {  
+            RPCServiceClient ser = new RPCServiceClient ();  
+            Options options = ser.getOptions();  
+              
+            // 指定调用WebService的URL  
+            EndpointReference targetEPR = new EndpointReference("http://bsp-test.sf-express.com:9090/bsp-ois/ws/expressService?wsdl");  
+            options.setTo(targetEPR);  
+            //options.setAction("命名空间/WS 方法名");   
+            options.setAction("http://service.expressservice.integration.sf.com/sfexpressService");  
+              
+            // 指定sfexpressService方法的参数值  
+            Object[] opAddEntryArgs = new Object[] { xmlString.toString()};  
+            // 指定sfexpressService方法返回值的数据类型的Class对象  
+            Class[] classes = new Class[] { String.class };  
+            // 指定要调用的sfexpressService方法及WSDL文件的命名空间  
+            QName opAddEntry = new QName("http://service.expressservice.integration.sf.com/","sfexpressService");  
+            // 调用sfexpressService方法并输出该方法的返回值  
+            Object[] str = ser.invokeBlocking(opAddEntry, opAddEntryArgs, classes);  
+            return str[0].toString();  
+        } catch (AxisFault e) {  
+            // TODO Auto-generated catch block  
+            e.printStackTrace();  
+        }  
+        return null;  
+    }  
+      
+    public static void main(String[] args) {  
+        //xmlString的格式  
+        StringBuilder xmlString = new StringBuilder();   
+        //根据不同的接口，修改对应的格式及内容。  
+        xmlString.append("<Request service='OrderService' lang='zh-CN'>");  
+        xmlString.append("<Head>null,null</Head>");    
+        xmlString.append("<Body>");    
+        xmlString.append("<Order orderid='123456'>");  
+        xmlString.append("</Order>");     
+        xmlString.append("</Body>");     
+        xmlString.append("</Request>");    
+        System.out.println(TestInterfaceUtils .getRes(xmlString.toString()));  
+    }  
+}
+

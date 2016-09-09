@@ -1,0 +1,17 @@
+package service;
+
+import kafka.KafkaProducer;
+
+public class ProducerService {
+	
+	public String send( String topic, String message ) {   
+		KafkaProducer producer = new KafkaProducer(topic);
+		producer.sendMessage(message); 
+		
+		return "Send";
+	}  
+
+	public static void main(String[] args) { 
+		System.out.println("11");
+	} 
+}

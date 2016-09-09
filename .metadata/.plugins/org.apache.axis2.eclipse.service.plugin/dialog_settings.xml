@@ -12,11 +12,11 @@
 		<item value="service.ProducerService" key="CLASSNAME"/>
 	</section>
 	<section name="org.apache.axis2.tool.service.eclipse.ui.ServiceArchiveOutputLocationPage">
-		<item value="" key="OUT_LOCATION"/>
-		<item value="producer_service" key="OUT_NAME"/>
+		<item value="C:\Users\ZW\Desktop" key="OUT_LOCATION"/>
+		<item value="producer_webservice" key="OUT_NAME"/>
 	</section>
 	<section name="org.apache.axis2.tool.service.eclipse.ui.ClassFileLocationPage">
-		<item value="E:\Environment Monitoring\kafka_webservice\target\classes" key="CLASS_FILE_LOCATION"/>
+		<item value="E:\Environment_Monitoring\kafka_webservcie\target\classes" key="CLASS_FILE_LOCATION"/>
 		<item value="true" key="FILTER_BY_CLASSES"/>
 	</section>
 	<section name="org.apache.axis2.tool.service.eclipse.ui.LibraryAddingPage">
